@@ -97,8 +97,8 @@ function generateVariableCosts(countries: string[]): void {
   stringifier.pipe(writableStream);
 }
 
-function saveCoutriesToFile(countries: string[]): void {
-  const outPath = path.resolve(outDir, 'coutries.txt');
+function saveCountriesToFile(countries: string[]): void {
+  const outPath = path.resolve(outDir, 'countries.txt');
   fs.writeFileSync(outPath, countries.join(','));
 }
 
@@ -112,7 +112,7 @@ export function generateInterstateTransitions(rows: number): void {
 
   checkOrCreateDir(outDir);
 
-  saveCoutriesToFile(writeCoutries);
+  saveCountriesToFile(writeCoutries);
 
   generateCapacity(writeCoutries);
   generateDemand(writeCoutries);
