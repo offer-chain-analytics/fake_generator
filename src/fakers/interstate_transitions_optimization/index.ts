@@ -97,6 +97,10 @@ function generateVariableCosts(countries: string[]): void {
   stringifier.pipe(writableStream);
 }
 
+/**
+ * generate list scv files (sync) for interstate transitions
+ * @param rows count contries for generate
+ */
 export function generateInterstateTransitions(rows: number): void {
   const readRows = rows < COUNTRIES.length ? rows : COUNTRIES.length - 1;
   const writeCoutries = COUNTRIES.slice(0, readRows);

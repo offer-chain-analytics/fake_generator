@@ -3,6 +3,7 @@ import { hideBin } from 'yargs/helpers';
 
 import { generateInterstateTransitions } from './fakers/interstate_transitions_optimization';
 
+// parse command lines args for render fake datas
 const argsParse =
   yargs(hideBin(process.argv))
     .option('service', {
