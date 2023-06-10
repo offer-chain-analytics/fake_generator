@@ -1,6 +1,8 @@
 import yargs from 'yargs/yargs';
 import { hideBin } from 'yargs/helpers';
 
+import { generateInterstateTransitions } from './fakers/interstate_transitions_optimization';
+
 const argsParse =
   yargs(hideBin(process.argv))
     .option('service', {
@@ -22,3 +24,9 @@ if (!argsParse.service) {
   process.exit(-1);
 }
 
+switch(argsParse.service) {
+  case 'interstateTransitions': {
+    generateInterstateTransitions(argsParse.size);
+    break;
+  }
+}

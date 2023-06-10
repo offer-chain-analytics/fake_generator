@@ -1,0 +1,15 @@
+export const COUNTRIES: string[] = [
+  'Abkhazia',
+  'Albania',
+  'Russian',
+  'USA',
+  'Germany',
+  'Bangladesh',
+  'Belarus',
+  'Brazil',
+  'Canada',
+  'China',
+  'Cuba',
+  'Egypt',
+  'France',
+];

@@ -15,5 +15,5 @@ fake data generation package for testing analytical models
 ## Example
 
 ```bash
-npm start -- --service testService --size 20
+npm start -- --service interstateTransitions --size 5
 ```
