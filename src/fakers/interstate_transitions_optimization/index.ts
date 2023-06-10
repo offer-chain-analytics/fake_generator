@@ -97,6 +97,11 @@ function generateVariableCosts(countries: string[]): void {
   stringifier.pipe(writableStream);
 }
 
+function saveCoutriesToFile(countries: string[]): void {
+  const outPath = path.resolve(outDir, 'coutries.txt');
+  fs.writeFileSync(outPath, countries.join(','));
+}
+
 /**
  * generate list scv files (sync) for interstate transitions
  * @param rows count contries for generate
@@ -106,6 +111,8 @@ export function generateInterstateTransitions(rows: number): void {
   const writeCoutries = COUNTRIES.slice(0, readRows);
 
   checkOrCreateDir(outDir);
+
+  saveCoutriesToFile(writeCoutries);
 
   generateCapacity(writeCoutries);
   generateDemand(writeCoutries);
